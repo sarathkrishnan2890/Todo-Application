@@ -1,0 +1,49 @@
+{% extends 'home.html' %}
+
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/create.css' %}">
+</head>
+<body>
+
+<div class="total">
+    <div class="container">
+        <div class="headline">
+            Create Todo
+        </div>
+        <div style="padding: 10px;">
+            <form method="post" action="">
+                {% csrf_token %}
+
+                <div class="form-field">
+                    {{ form.task.label_tag }}
+                    {{ form.task }}
+                </div>
+
+                <div class="form-field">
+                    {{ form.description.label_tag }}
+                    {{ form.description }}
+                </div>
+
+                <div class="form-field"
+                     style="width: 200px; height: 50px; display: flex; justify-content: space-between; align-items: center;">
+                    {{ form.completed.label_tag }} {{ form.completed }}
+                </div>
+
+
+                <div class="btn">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock content %}

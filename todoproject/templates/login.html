@@ -1,0 +1,44 @@
+{% extends 'home.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+<img src="{% static 'images/todo2.jpg' %}" alt="Background Image" class="background-image" style="
+
+position: fixed;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+object-fit: cover;
+z-index: -1;
+">
+<div class="container" style="color:red; padding-left:860px; padding-top:180px;">
+    <div class="head" style="border: 3px solid rgb(233, 78, 39); padding:50px;width:425px;">
+        <header style="text-align:center;" >
+            <h1><b>TODO LOGIN</b></h1>
+        </header>
+
+
+
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input class="button bg-danger " style="padding-left:10px;padding-right:10px; " type="submit" value="login">
+            <a href="{% url 'register'%}">dont have a account register here</a>
+        </form>
+
+    </div>
+</div>
+</body>
+</html>
+{% endblock content %}
+
+
+

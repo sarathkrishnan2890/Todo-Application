@@ -1,0 +1,73 @@
+/* Set a maximum width for the page */
+body {
+  max-width: 100%;
+  margin: 0;
+}
+
+
+.headline {
+  text-align: center;
+  font-size: 24px;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style the form container */
+.container {
+  margin-top:50px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  animation: fadeIn 1s;
+}
+
+/* Style the navbar to fill the page */
+.navbar {
+  background-color: #007BFF;
+  padding: 10px 0;
+}
+
+.navbar a {
+  color: #fff;
+}
+
+/* Style form labels */
+label {
+  font-weight: bold;
+}
+
+/* Style input fields */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the submit button */
+.btn button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.completed-label {
+    display: inline-block;
+    width: 50%;
+}
+
+.completed-checkbox {
+    display: inline-block;
+    width: 10%;
+}
+.btn button:hover {
+  background-color: blue;
+}
